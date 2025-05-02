@@ -1,27 +1,29 @@
-# Makefile untuk pull, build, dan restart Docusaurus dengan PM2
+# Makefile for automating pull, build, and PM2 restart for Docusaurus
 
-.PHONY: all pull install build restart pm2-restart
+.PHONY: all pull install build restart
 
 BRANCH = main
-PORT = 3017
 APP_NAME = docusaurus-site
 
 all: pull install build restart
 
 pull:
-	@echo "📥 Menarik pembaruan dari repository..."
+	@echo "📥 Pulling latest code from the '$(BRANCH)' branch..."
 	git pull origin $(BRANCH)
 
 install:
-	@echo "📦 Menginstal dependensi..."
-	npm install
+	@echo "📦 Installing dependencies..."
+	npm install --loglevel=error
 
 build:
-	@echo "🏗️  Membangun situs Docusaurus..."
+	@echo "🏗️  Building the Docusaurus site..."
 	npm run build
 
 restart:
-	@echo "🔄 Memulai ulang aplikasi dengan PM2..."
-	pm2 delete $(APP_NAME) || true
+	@echo "🔄 Restarting the PM2 process..."
+	# Delete the existing PM2 process if it exists
+	-@pm2 delete $(APP_NAME)
+	# Start the application using the ecosystem configuration
 	pm2 start ecosystem.config.js --only $(APP_NAME) --env production
+	# Save the PM2 process list for startup
 	pm2 save

@@ -10,12 +10,12 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "Kirimy Docs",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://docs.kirimy.id",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -76,9 +76,9 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "Kirimy Docs",
         logo: {
-          alt: "My Site Logo",
+          alt: "Kirimy Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -90,7 +90,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/pendig/kirimy-docs",
             label: "GitHub",
             position: "right",
           },
@@ -134,12 +134,12 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/pendig/kirimy-docs",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Kirimy.id, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
