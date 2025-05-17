@@ -79,7 +79,7 @@ const config = {
         title: "Kirimy Docs",
         logo: {
           alt: "Kirimy Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {
