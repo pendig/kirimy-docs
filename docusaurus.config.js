@@ -104,7 +104,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/pendahuluan/apa-itu-kirimy",
+                to: "/docs/introduction/what-is-kirimy",
               },
             ],
           },
