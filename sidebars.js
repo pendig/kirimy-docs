@@ -76,6 +76,11 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "API",
+      items: ["api/client-api"],
+    },
+    {
+      type: "category",
       label: "AI Agent",
       items: [
         "ai-agent/create-agent",
