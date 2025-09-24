@@ -66,6 +66,9 @@ const config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        googleTagManager: {
+          containerId: 'G-PWQ9D70CEC',
+        },
       }),
     ],
   ],
